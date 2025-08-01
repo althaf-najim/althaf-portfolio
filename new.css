@@ -1,0 +1,130 @@
+.intro-website {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+.container{
+    display: flex;
+    background:red;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 4s ease-in-out;
+}
+.zoomed {
+    transform: scale(10);
+    border-radius: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.small-btn {
+    padding: 5px;
+    width: 80px;
+    height: 85px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background:yellow;
+    border:5px;
+    cursor:pointer;
+    
+}
+
+.small-btn img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+}
+
+.button-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.9s ease-in-out;
+}
+.zoomed {
+    transform: scale(10);
+    border-radius: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bounce {
+    animation: bounce 1.5s ;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.tap-text {
+    font-size: 1.5rem;
+    color: rgb(181, 224, 158);
+    font-weight: bold;
+    margin-top: 20px;
+    animation: bounce 1.5s infinite;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 2.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.glow {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgb(255, 57, 7);
+    }
+    to {
+        box-shadow: 0 0 30px rgb(225, 225, 10);
+    }
+}
